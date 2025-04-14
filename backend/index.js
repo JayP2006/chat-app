@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
-const cors = require('cors');
+
 app.use(cors({
   origin: ["https://chat-karo-rg16.onrender.com"], // ✅ your actual deployed frontend
   credentials: true,
