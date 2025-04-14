@@ -6,7 +6,9 @@ const messageroute=require("./routes/messageroute");
 const userRouter=require("./routes/userRoute")
 const cookieParser = require("cookie-parser");
 const cors = require('cors');
+const path=require('path')
 const {app,server}=require("./Socket/socket")
+const __dirname=path.resolve();
 
 dotenv.config();
 app.use(express.json()); 
@@ -22,6 +24,10 @@ const port=process.env.PORT;
 app.use("/api/auth",usercontrol)
 app.use("/api/message",messageroute)
 app.use("/api/user",userRouter)
+app.use(express.static(path.join(__dirname,"/frontend/dist")))
+app.get("*",(req,res)=>{
+    res.sendFile(path.join(__dirname,"frontend","dist","index.html"))
+})
 server.listen(port,()=>{
     dbconnect();
     console.log(port);
