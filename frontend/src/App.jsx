@@ -2,7 +2,7 @@ import Login from "./login/Login"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import {Route,Routes} from 'react-router-dom'
-import Register from "./register/register";
+import Register from "./register/Register";
 import Home from "./Home/Home";
 import Dashboard from "./Dashboard/Dashboard";
 import { VerifyUser } from "./utils/VerifyUser";
