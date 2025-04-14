@@ -4,7 +4,7 @@ const router=express.Router()
 const{sendmessage,getmessages}=require('../controllers/messageController')
 
 router.post('/send/:id',sendmessage)
-router.get('/:id',getmessages)
+router.get('/user',getmessages)
 
 
 module.exports=router
