@@ -91,7 +91,7 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* Footer */}
+     
       <footer className="p-4 text-center text-sm text-gray-500 border-t border-gray-800">
         © 2025 ChatVerse. Chat with anyone you want ,Buit by Patel Jay R contactUs-jay91451@gmail.com.
       </footer>
