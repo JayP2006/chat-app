@@ -1,5 +1,5 @@
 const User =require("../Models/userModels")
-const bcrypt=require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwttoken = require("../utils/jwtwebtoken");
 
 module.exports.userRegister=async (req,res)=>{
