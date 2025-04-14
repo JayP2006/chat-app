@@ -134,7 +134,7 @@ const profilesend=()=>{
       setlatestmessage(newMessage)
       const msgPayload = { message: newMessage };
       const { data } = await axios.post(
-        `http://localhost:3000/api/message/send/${selectedUser._id}?user=${authUser._id}`,
+        `http://localhost:3000/api/message/send/rid?${selectedUser._id}?user=${authUser._id}`,
         msgPayload
       );
 
