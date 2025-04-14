@@ -5,7 +5,7 @@ const { getreceiverid ,io} = require("../Socket/socket");
 module.exports.sendmessage=async(req,res)=>{
     try {
         const {message}=req.body;
-        const receiverid=req.query.rid;
+        const {id:receiverid}=req.params;
         const senderid = req.query.user;
         let chats=await Conversation.findOne({
             participants:{

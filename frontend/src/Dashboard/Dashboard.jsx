@@ -90,7 +90,7 @@ const profilesend=()=>{
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/message/user?user=${authUser._id}`
+          `http://localhost:3000/api/message/${selectedUser?._id}?user=${authUser._id}`
         );
         const data = response.data;
         if (data.success === false) {
@@ -134,7 +134,7 @@ const profilesend=()=>{
       setlatestmessage(newMessage)
       const msgPayload = { message: newMessage };
       const { data } = await axios.post(
-        `http://localhost:3000/api/message/send/rid?${selectedUser._id}?user=${authUser._id}`,
+        `http://localhost:3000/api/message/send/${selectedUser._id}?user=${authUser._id}`,
         msgPayload
       );
 

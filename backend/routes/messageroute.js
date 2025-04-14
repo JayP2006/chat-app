@@ -3,8 +3,8 @@ const isLogin = require('../middleware/isLogin');
 const router=express.Router()
 const{sendmessage,getmessages}=require('../controllers/messageController')
 
-router.post('/send',sendmessage)
-router.get('/user',getmessages)
+router.post('/send/:id',sendmessage)
+router.get('/:id',getmessages)
 
 
 module.exports=router
