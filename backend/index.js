@@ -13,8 +13,11 @@ dotenv.config();
 app.use(express.json()); 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
-
-app.use(cors());
+const corsOptions = {
+    origin: ['https://chat-app-yjfi.vercel.app'],
+    credentials: true
+  };
+app.use(cors(corsOptions));
 
 app.get("/",(req,res)=>{
     res.send('hello');
