@@ -13,7 +13,7 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socketInstance = io(process.env.REACT_APP_API_URL, {
+      const socketInstance = io("https://chat-karo-rg16.onrender.com", {
         query: {
           userId: authUser._id,
         },
