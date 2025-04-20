@@ -75,7 +75,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post(`https://chat-karo-rg16.onrender.com/api/auth/register`, formData);
+      const res = await axios.post('http://localhost:3000/api/auth/register', formData);
       toast.success(res.data.message);
       localStorage.setItem('chatapp', JSON.stringify(res.data));
       setAuthUser(res.data);

@@ -66,7 +66,7 @@ const Login = () => {
     e.preventDefault();
     setloading(true);
     try {
-      const login = await axios.post(`https://chat-karo-rg16.onrender.com/api/auth/login`, formData);
+      const login = await axios.post(`http://localhost:3000/api/auth/login`, formData);
       const data = login.data;
       if (data.success === false) {
         setloading(false);

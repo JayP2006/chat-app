@@ -8,9 +8,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: ['https://chat-karo-av9g.vercel.app'],
-        methods: ['GET','POST'],
-        credentials: true
+        origin: ['http://localhost:5173'],
+        methods: ['GET','POST']
     }
 });
 
