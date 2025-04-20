@@ -16,6 +16,13 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
+// Serve static files from frontend/dist
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+// For SPA routing (React)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+});
 app.get("/",(req,res)=>{
     res.send('hello');
 })
