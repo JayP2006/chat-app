@@ -13,7 +13,7 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socketInstance = io("http://localhost:3000", {
+      const socketInstance = io(process.env.REACT_APP_API_URL, {
         query: {
           userId: authUser._id,
         },

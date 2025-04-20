@@ -69,7 +69,7 @@ const profilesend=()=>{
       setLoading(true);
       try {
         const { data } = await axios.get(
-          `http://localhost:3000/api/user/currentchatters?currentchatters=${authUser._id}`
+          `https://chat-karo-rg16.onrender.com/api/user/currentchatters?currentchatters=${authUser._id}`
         );
         setChatUser(data);
       } catch (err) {
@@ -90,7 +90,7 @@ const profilesend=()=>{
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/message/${selectedUser?._id}?user=${authUser._id}`
+          `https://chat-karo-rg16.onrender.com/api/message/${selectedUser?._id}?user=${authUser._id}`
         );
         const data = response.data;
         if (data.success === false) {
@@ -113,7 +113,7 @@ const profilesend=()=>{
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/user/search?search=${searchInput}`
+        `https://chat-karo-rg16.onrender.com/api/user/search?search=${searchInput}`
       );
       if (data.length === 0) {
         toast.info("User not found");
@@ -134,7 +134,7 @@ const profilesend=()=>{
       setlatestmessage(newMessage)
       const msgPayload = { message: newMessage };
       const { data } = await axios.post(
-        `http://localhost:3000/api/message/send/${selectedUser._id}?user=${authUser._id}`,
+        `https://chat-karo-rg16.onrender.com/api/message/send/${selectedUser._id}?user=${authUser._id}`,
         msgPayload
       );
 
@@ -156,7 +156,7 @@ const profilesend=()=>{
     const confirm = window.prompt("Type username to LOGOUT");
     if (confirm === authUser.username) {
       try {
-        const { data } = await axios.post(`http://localhost:3000/api/auth/logout`);
+        const { data } = await axios.post(`https://chat-karo-rg16.onrender.com/api/auth/logout`);
         toast.success(data.message);
         localStorage.removeItem('chatapp');
         setAuthUser(null);
