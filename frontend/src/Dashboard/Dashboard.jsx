@@ -69,7 +69,7 @@ const profilesend=()=>{
       setLoading(true);
       try {
         const { data } = await axios.get(
-          `http://localhost:3000/api/user/currentchatters?currentchatters=${authUser._id}`
+          `https://chatobi-backend.onrender.com/api/user/currentchatters?currentchatters=${authUser._id}`
         );
         setChatUser(data);
       } catch (err) {
@@ -90,7 +90,7 @@ const profilesend=()=>{
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/message/${selectedUser?._id}?user=${authUser._id}`
+          `https://chatobi-backend.onrender.com/api/message/${selectedUser?._id}?user=${authUser._id}`
         );
         const data = response.data;
         if (data.success === false) {
