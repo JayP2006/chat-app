@@ -22,7 +22,7 @@ export default function HomePage() {
       <nav className="w-full px-4 py-3 flex justify-between items-center shadow-md bg-opacity-20 backdrop-blur-md relative z-10">
        <div className="flex items-center gap-2 text-2xl font-bold">
   <img 
-    src="frontend/src/assets/chatobinav.png" 
+    src="./assets/chatobinav.png" 
     alt="ChatObi logo" 
     className="w-6 h-6"
   />
