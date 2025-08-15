@@ -19,10 +19,14 @@ const Navbar = () => {
 
   return (
     <nav className="w-full px-4 py-3 flex justify-between items-center shadow-md bg-opacity-20 backdrop-blur-md relative z-10 text-white">
-      <div className="flex items-center gap-2 text-2xl font-bold">
-        <Sparkles className="text-yellow-400" />
-        ChatVerse
-      </div>
+     <div className="flex items-center gap-2 text-2xl font-bold">
+  <img 
+    src="/chatobinav.png" 
+    alt="ChatObi logo" 
+    className="w-6 h-6"
+  />
+  ChatObi
+</div>
 
       <div className="hidden md:flex gap-4">
         <NavLink to="/login">
@@ -179,7 +183,7 @@ const Register = () => {
       </div>
 
       <footer className="p-4 text-center text-sm text-gray-500 border-t border-gray-800">
-        © 2025 ChatVerse. All rights reserved.
+        © 2025 ChatObi. All rights reserved.
       </footer>
     </div>
   );
