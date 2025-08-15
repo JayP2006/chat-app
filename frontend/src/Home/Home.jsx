@@ -79,7 +79,7 @@ export default function HomePage() {
           Connect. Chat. Collaborate.
         </h2>
         <p className="text-base sm:text-lg md:text-xl mb-10 max-w-xl text-gray-300">
-          Welcome to ChatOb – your space to connect with friends, collaborate with peers,
+          Welcome to ChatObi – your space to connect with friends, collaborate with peers,
           and enjoy seamless communication in real time.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
@@ -98,7 +98,7 @@ export default function HomePage() {
 
      
       <footer className="p-4 text-center text-sm text-gray-500 border-t border-gray-800">
-        © 2025 ChatVerse. Chat with anyone you want ,Buit by Patel Jay R contactUs-jay91451@gmail.com.
+        © 2025 ChatObi. Chat with anyone you want ,Buit by Patel Jay R contactUs-jay91451@gmail.com.
       </footer>
     </div>
   );
