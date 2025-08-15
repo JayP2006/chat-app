@@ -13,7 +13,7 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socketInstance = io("http://localhost:3000", {
+      const socketInstance = io("https://chatobi-backend.onrender.com", {
         query: {
           userId: authUser._id,
           transports: ["websocket"],
