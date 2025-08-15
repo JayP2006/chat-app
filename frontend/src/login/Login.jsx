@@ -150,7 +150,7 @@ const Login = () => {
       </div>
 
       <footer className="p-4 text-center text-sm text-gray-500 border-t border-gray-800">
-        © 2025 ChatVerse. All rights reserved.
+        © 2025 ChatObi. All rights reserved.
       </footer>
     </div>
   );
