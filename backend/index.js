@@ -21,7 +21,7 @@ app.use("/api/message", messageroute);
 app.use("/api/user", userRouter);
 
 // ✅ Serve frontend build
-
+app.use(express.static(path.join(__dirname, 'build')));
 // ✅ Serve frontend build
 app.get(/^\/(?!api|https?:).*/, (req, res) => {
   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
