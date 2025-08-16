@@ -22,7 +22,9 @@ app.use("/api/user", userRouter);
 
 // ✅ Serve frontend build
 
-
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+});
 const port = process.env.PORT || 3000;
 server.listen(port, () => {
   dbconnect();
