@@ -21,8 +21,10 @@ app.use("/api/message", messageroute);
 app.use("/api/user", userRouter);
 
 // ✅ Serve frontend build
-app.get(/^\/(?!api|https?:).*/, (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
 });
 const port = process.env.PORT || 3000;
 server.listen(port, () => {
