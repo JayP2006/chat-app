@@ -23,9 +23,7 @@ app.use("/api/user", userRouter);
 // ✅ Serve frontend build
 
 // ✅ Serve frontend build
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.get('*', (req, res) => {
+app.get(/^\/(?!api|https?:).*/, (req, res) => {
   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 });
 const port = process.env.PORT || 3000;
