@@ -216,7 +216,7 @@ const profilesend=()=>{
           />
           <div>
             <h4 className="font-medium text-black text-sm">{user.username}</h4>
-            <p className="text-xs text-black truncate">{user.gender}</p>
+            <p className="text-xs text-black">{user.gender}</p>
           </div>
         </div>
       ))}
