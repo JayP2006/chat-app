@@ -215,8 +215,8 @@ const profilesend=()=>{
             className="w-10 h-10 rounded-full"
           />
           <div>
-            <h4 className="font-medium text-sm">{user.username}</h4>
-            <p className="text-xs text-gray-500 truncate">{user.gender}</p>
+            <h4 className="font-medium text-black text-sm">{user.username}</h4>
+            <p className="text-xs text-black truncate">{user.gender}</p>
           </div>
         </div>
       ))}
